@@ -1,0 +1,15 @@
+@import "../../../globals/colors.scss";
+@import "../../../globals/mixins.scss";
+
+.headers-container {
+  @include container;
+  background-color: $primary-light;
+  color: $primaryWhite;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+}

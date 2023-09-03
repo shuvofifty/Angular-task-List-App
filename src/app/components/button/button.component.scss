@@ -1,0 +1,10 @@
+@import "../../../globals/colors.scss";
+@import "../../../globals/mixins.scss";
+
+.btn {
+  @include button;
+}
+
+.btn:hover {
+  background-color: $primaryGrey;
+}
