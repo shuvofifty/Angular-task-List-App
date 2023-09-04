@@ -19,4 +19,12 @@ export class TodoTaskService {
   getTodo(): Observable<ToDoTask[]> {
     return this.todo$.asObservable();
   }
+
+  addTodoTask(name: string) {
+    const task: ToDoTask = {
+      taskName: name,
+      isCompleted: false
+    }
+    this.todoTasks.push(task)
+  }
 }

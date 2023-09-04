@@ -1,0 +1,4 @@
+<form [formGroup]="taskForm" class="todoFormContainer">
+    <input type="text" formControlName="name" placeholder="Drink some water" />
+    <app-button type="submit" text="Add New Task" color="white" (btnClick)="onSubmitForm()"></app-button>    
+</form>

@@ -6,6 +6,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { ButtonComponent } from './components/button/button.component';
 import { CardlistsComponent } from './components/cardlists/cardlists.component';
 import { CardComponent } from './components/card/card.component';
+import { AddTodoTaskComponent } from './components/add-todo-task/add-todo-task.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,10 +15,12 @@ import { CardComponent } from './components/card/card.component';
     HeaderComponent,
     ButtonComponent,
     CardlistsComponent,
-    CardComponent
+    CardComponent,
+    AddTodoTaskComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
