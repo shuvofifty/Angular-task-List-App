@@ -1,0 +1,19 @@
+@import "../../../globals/colors.scss";
+
+.cardContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    background-color: $primary-light;
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .actionContainer {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;  
+    }
+}
