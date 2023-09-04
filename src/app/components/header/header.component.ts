@@ -8,8 +8,9 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 export class HeaderComponent {
   title: string = 'Todo List';
+  shouldShowAddTask: boolean = false
 
   toggleAddTaskView() {
-    console.log('add task');
+    this.shouldShowAddTask = !this.shouldShowAddTask
   }
 }

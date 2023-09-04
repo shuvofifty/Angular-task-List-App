@@ -1,11 +1,11 @@
 <header>
   <h1>{{ title }}</h1>
   <app-button
-    color="white"
-    text="Add Task"
+    [color]="shouldShowAddTask ? 'red' : 'white'"
+    [text]="shouldShowAddTask ? 'Close' : 'Add task'"
     (btnClick)="toggleAddTaskView()"
   ></app-button>
 </header>
 
-<app-add-todo-task></app-add-todo-task>
+<app-add-todo-task *ngIf="shouldShowAddTask"></app-add-todo-task>
 <hr />
