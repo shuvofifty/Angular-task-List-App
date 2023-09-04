@@ -1,15 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import ToDoTask from 'src/app/Models/Task';
+import { TodoTaskService } from 'src/app/service/todo-task.service';
 
 @Component({
   selector: 'app-cardlists',
   templateUrl: './cardlists.component.html',
   styleUrls: ['./cardlists.component.scss']
 })
-export class CardlistsComponent {
-  todoLists: ToDoTask[] = [
-    {taskName: "Some sample", isCompleted: false},
-    {taskName: "Another Sample", isCompleted: false},
-    {taskName: "Boi thats a lot of sampling", isCompleted: false}
-  ]
+export class CardlistsComponent implements OnInit {
+  todoLists: ToDoTask[] = []
+
+  constructor(private todoService: TodoTaskService) {
+  }
+
+  ngOnInit(): void {
+    this.todoService.getTodo().subscribe(tasks => {
+      this.todoLists = tasks
+    })
+  }
 }
