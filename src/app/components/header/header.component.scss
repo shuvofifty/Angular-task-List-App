@@ -3,8 +3,9 @@
 
 .headers-container {
   @include container;
-  background-color: $primary-light;
+  background-color: $primary;
   color: $primaryWhite;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 12px;
 
   header {
     display: flex;

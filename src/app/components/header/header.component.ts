@@ -8,4 +8,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 export class HeaderComponent {
   title: string = 'Todo List';
+
+  toggleAddTaskView() {
+    console.log('add task');
+  }
 }
